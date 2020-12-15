@@ -32,6 +32,17 @@ a {
   text-decoration: none;
   color: #fff;
 }
+ul {
+  list-style: none;
+}
+main {
+  min-height: 100vh;
+}
+.wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .btn {
   font-size: 1.7rem;
   font-weight: 500;
@@ -43,7 +54,7 @@ a {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0.05rem;
   position: relative;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 .btn i {
   position: absolute;
@@ -51,7 +62,7 @@ a {
   top: 50%;
   transform: translateY(-50%);
   right: 45px;
-  transition: all 0.3s;
+  transition: all 0.2s;
   opacity: 0;
 }
 .btn:hover i,
@@ -63,15 +74,6 @@ a {
   padding-left: 35px;
   padding-right: 55px;
 }
-/* .btn:hover */
-
-/*** Main ***/
-
-main {
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-}
 
 /*** Page Titles ***/
 
@@ -79,15 +81,12 @@ main {
 
 header {
   position: fixed;
-  right: 30px;
+  right: 15px;
   bottom: 0;
   display: flex;
   align-items: center;
   height: calc(100vh - 200px);
   top: 100px;
-}
-header ul {
-  list-style: none;
 }
 .nav-item {
   height: 50px;
@@ -112,7 +111,7 @@ header ul {
 }
 .nav-item i {
   color: #ddd;
-  font-size: 1.5rem;
+  font-size: 2rem;
   transition: .25s; 
   display: block;
   cursor: pointer;
@@ -199,4 +198,166 @@ header ul {
   font-size: 1.7rem;
   line-height: 3.2rem;
   margin-bottom: 35px;
+}
+
+/*** Titles of all pages aside from the homepage ***/
+.title-section {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.title-section h1 {
+  font-size: 5.6rem;
+  font-weight: 900;
+  color: #fff;
+  margin: 0; 
+  line-height: 154px; /* matches the line height of the background text */
+}
+.title-section h1 span {
+  color: #ffb400;
+}
+.title-section .title-background {
+  font-size: 11rem;
+  font-weight: 800;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: -5;
+  letter-spacing: 1rem;
+  color: rgba(255, 255, 255, 0.07);
+}
+main h2 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/*** About page ***/
+.seperation {
+  width: 50%;
+  margin: 70px auto 60px auto;
+  height: 1px;
+  background-color: #252525;
+}
+.about h2 {
+  text-align: center;
+}
+.about .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.personal-info, .education {
+  font-size: 1.6rem;
+  width: 40%;
+}
+/* personal info section */
+.personal-info .info-title {
+  opacity: 0.8;
+  margin-bottom: 3px;
+}
+.personal-info .info-description {
+  margin-bottom: 10px;
+}
+
+/* education section */
+.education {
+  width: 60%;
+}
+.education li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+}
+.education .icon {
+  width: 10%;
+  background-color: #ffb400;
+  border-radius: 50%;
+  display: block;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  z-index: 100;
+}
+.education .icon i {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.education li::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  height: calc(100% - 40px);
+  border-left: 1px solid #333;
+  z-index: 0;
+}
+.education li:nth-child(2) {
+  margin-bottom: 0;
+}
+.education-info {
+  width: 85%;
+}
+.education-info .date {
+  font-size: 1.2rem;
+  background-color: #252525;
+  padding: 3px 8px;
+  border-radius: 8px;
+  opacity: 0.8;
+}
+.education-info h3 {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin: 15px 0;
+}
+.education-info h3 span {
+  opacity: 0.8;
+  font-size: 1.6rem;
+}
+.education-info p {
+  font-size: 1.4rem;
+  color: #eee;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* my skills section */
+.my-skills {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.my-skills ul {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.my-skills li {
+  display: flex;
+  flex-direction: column;
+  /* color: #ffb400; */
+  font-size: 1.4rem;
+}
+.my-skills i {
+  font-size: 6rem;
+  margin-bottom: 10px;
+  /* color: #fff; */
+}
+.my-skills i:hover {
+  color: #ffb400;
+}
+
+
+.my-skills ul {
+  background-color:rgba(255, 255, 255, 0.07);
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #ffb400;
 }
