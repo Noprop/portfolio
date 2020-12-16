@@ -350,12 +350,70 @@ main h2 {
 .my-skills i:hover {
   color: #ffb400;
 }
-
-
 .my-skills ul {
   background-color:rgba(255, 255, 255, 0.07);
   padding: 20px 0;
   border-radius: 10px;
+}
+
+/*** Contact page ***/
+.contact .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-info {
+  width: 24%;
+}
+.contact-form {
+  width: 74%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-form input:nth-child(-n+5) {
+  width: calc((100% / 3) - 20px);
+  margin-bottom: 30px;
+  padding: 20px 20px;
+  color: #fff;
+}
+.contact-form input:nth-child(2),
+.contact-form input:nth-child(3) {
+  margin-right: 30px;
+}
+.contact-form textarea {
+  min-width: 100%;
+  padding: 20px 20px 0 20px;
+  height: 160px;
+  min-height: 60px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.contact-form input, 
+.contact-form textarea {
+  background-color: #252525;
+  border: none;
+  border-radius: 32px;
+  color: #fff;
+  font-size: 1.8rem;
+  border: 1px solid #252525;
+  transition: all 0.3s;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #ffb400;
+}
+.contact-form button[type="submit"] {
+  background-color: #ffb400;
+  text-transform: uppercase;
+  border-radius: 32px;
+  cursor: pointer;
+  border: none;
 }
 
 footer {
