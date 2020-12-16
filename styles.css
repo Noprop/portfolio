@@ -361,11 +361,57 @@ main h2 {
   display: flex;
   justify-content: space-between;
 }
+/* contact info */
 .contact-info {
-  width: 24%;
+  width: 28%;
 }
+.contact-info h2 {
+  font-size: 2.6rem;
+}
+.contact-info p {
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 25px;
+}
+.contact-info .email {
+  display: flex;
+}
+.contact-info .email i {
+  color: #ffb400;
+  font-size: 3.6rem;
+  margin-right: 12px;
+}
+.contact-info .email span {
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-right: 60%;
+}
+.contact-info .social-links ul {
+  display: flex;
+}
+.contact-info .social-links li {
+  
+  margin-right: 10px;
+}
+.contact-info a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b2a2a;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 2.1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.contact-info .social-links a:hover {
+  background-color: #ffb400;
+}
+
+/* contact form */
 .contact-form {
-  width: 74%;
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
 }
