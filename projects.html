@@ -10,7 +10,7 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700" rel="stylesheet">
 </head>
-<body>
+<body class="projects">
   <header>
     <ul class="desktop-menu">
       <li class="nav-item">
@@ -44,9 +44,10 @@
     <span class="title-background">Works</span>
   </section>
   <main>
-    <div class="wrapper">
-      <section class="grid-gallery">
-        <ul>
+    <!-- grid gallery from here: http://tympanus.net/codrops/2014/03/21/google-grid-gallery/ !!-->
+    <div id="grid-gallery" class="grid-gallery">
+      <section class="grid-wrap">
+        <ul class="grid">
           <li>
             <figure>
               <img src="./assets/solar.JPG" alt="Solar stay project">
@@ -64,12 +65,55 @@
           </li>
           <li>
             <figure>
-
+              <img src="./assets/binge.jpg" alt="Binge fest project">
             </figure>
           </li>
         </ul>
-      </section>
+      </section> <!-- Grid Gallery -->
+      <section class="slideshow">
+        <ul>
+          <li>
+            <figure>
+              <figcaption>
+                <h3>Solar Stay</h3>
+                <p>cool project man</p>
+              </figcaption>
+              <img src="./assets/solar.JPG" alt="Solar stay project">
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <figcaption>
+                <h3>Meal Combinator</h3>
+                <p></p>
+              </figcaption>
+              <img src="./assets/combinator.jpg" alt="Meal combinator project">
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <figcaption>
+                <h3>Binge Fest</h3>
+                <p></p>
+              </figcaption>
+              <img src="./assets/binge.jpg" alt="Binge fest project">
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <figcaption>
+                <h3></h3>
+                <p></p>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section> <!-- slideshow -->
     </div>
+    
   </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./scripts.js"></script>
+  <!-- <script src="./CBPGridGallery.js"></script> -->
 </body>
 </html>
