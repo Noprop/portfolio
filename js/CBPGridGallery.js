@@ -70,20 +70,8 @@
 		this.ctrlPrev = this.el.querySelector( 'section.slideshow > nav > span.nav-prev' );
 		this.ctrlNext = this.el.querySelector( 'section.slideshow > nav > span.nav-next' );
 		this.ctrlClose = this.el.querySelector( 'section.slideshow > nav > span.nav-close' );
-		// init masonry grid
-		this._initMasonry();
 		// init events
 		this._initEvents();
-	};
-
-	CBPGridGallery.prototype._initMasonry = function() {
-		var grid = this.grid;
-		imagesLoaded( grid, function() {
-			new Masonry( grid, {
-				itemSelector: 'li',
-				columnWidth: grid.querySelector( '.grid-sizer' )
-			});
-		});
 	};
 
 	CBPGridGallery.prototype._initEvents = function() {
@@ -350,6 +338,6 @@
 	}
 
 	// add to global namespace
-	app.CBPGridGallery = CBPGridGallery;
+	window.CBPGridGallery = CBPGridGallery;
 
 })( window );

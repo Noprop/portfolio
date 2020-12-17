@@ -464,6 +464,12 @@ main h2 {
 
 
 /*** Projects page  ***/
+
+
+/* move this */
+
+
+
 .portfolio .grid-gallery ul {
   list-style: none;
   margin: 0;
@@ -480,7 +486,7 @@ main h2 {
 }
 .projects .grid-wrap {
   margin: 0 auto;
-  width: 80%;
+  width: 50%;
 }
 .projects .grid {
   margin: 0 auto;
@@ -577,7 +583,7 @@ main h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -280px 0 0 -330px;
+  margin: -382px 0 0 -330px; /* half of height/width */
   visibility: hidden;
 }
 .projects .slideshow ul > li.show {
@@ -624,7 +630,58 @@ main h2 {
   font-size: 33px;
 }
 
+/* Navigation */
+.portfolio .slideshow nav span {
+  position: fixed;
+  z-index: 1000;
+  text-align: center;
+  cursor: pointer;
+  padding: 200px 30px;
+  color: #fff;
+}
 
+.portfolio .slideshow nav span.nav-prev,
+.portfolio .slideshow nav span.nav-next {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 41px;
+  line-height: 58px;
+}
+
+.portfolio .slideshow nav span.nav-prev {
+  left: 0;
+}
+
+.portfolio .slideshow nav span.nav-next {
+  right: 0;
+}
+
+.portfolio .slideshow nav span.nav-close {
+  top: 30px;
+  right: 30px;
+  padding: 0;
+}
+
+/* Info on arrow key navigation */
+.info-keys {
+	position: fixed;
+	top: 12px;
+	left: 12px;
+	width: 80px;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.info-keys i {
+  font-size: 2.4rem;
+  margin-bottom: 3px;
+}
+.info-keys i:first-child {
+  margin-right: 3px;
+}
 
 /* slideshow styles */
 /* most of it is from here: http://tympanus.net/codrops/2014/03/21/google-grid-gallery/ */
@@ -669,4 +726,33 @@ main h2 {
 
 footer {
   background-color: #ffb400;
+}
+
+
+
+
+
+
+
+
+.grid figure div {
+  background-color: #ffb400;
+}
+.portfolio .grid figure div {
+	position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.portfolio .grid figure div span {
+  width: 50%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+}
+
+.grid span {
+  width: 200px;
 }
