@@ -462,6 +462,25 @@ main h2 {
   border: none;
 }
 
+
+/*** Projects page  ***/
+.grid-gallery ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 1000px;
+  /* grid-gap: 20px; */
+}
+.grid-gallery li {
+  width: 100%;
+  
+}
+.grid-gallery figure {
+  width: 100%;
+}
+.grid-gallery img {
+  border-radius: 6px;
+}
+
 footer {
   background-color: #ffb400;
 }
