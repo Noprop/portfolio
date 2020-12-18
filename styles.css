@@ -262,6 +262,15 @@ main h2 {
 .personal-info .info-description {
   margin-bottom: 10px;
 }
+.personal-info li:last-child {
+  margin-top: 40px;
+}
+.personal-info li a {
+  border: none;
+  font-size: 1.5rem;
+  padding: 13px 45px;
+  cursor: pointer;
+}
 
 /* education section */
 .education {
@@ -330,25 +339,24 @@ main h2 {
 
 /* my skills section */
 .my-skills {
-  width: 80%;
-  margin: 0 auto;
+  width: 60%;
+  margin: 0 auto 50px auto;
   text-align: center;
 }
 .my-skills ul {
   display: grid; 
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
+  padding: 0 20px;
 }
 .my-skills li {
   display: flex;
   flex-direction: column;
-  /* color: #ffb400; */
   font-size: 1.4rem;
 }
 .my-skills i {
   font-size: 6rem;
   margin-bottom: 10px;
-  /* color: #fff; */
 }
 .my-skills i:hover {
   color: #ffb400;
@@ -393,7 +401,6 @@ main h2 {
   display: flex;
 }
 .contact-info .social-links li {
-  
   margin-right: 10px;
 }
 .contact-info a {
@@ -467,12 +474,10 @@ main h2 {
 
 
 /*** Projects page  ***/
-
-
-/* move this */
-
-
-
+/* styling from these two resources: 
+  https://tympanus.net/codrops/2012/04/09/direction-aware-hover-effect-with-css3-and-jquery/
+  http://tympanus.net/codrops/2014/03/21/google-grid-gallery/
+*/
 .portfolio .grid-gallery ul {
   list-style: none;
   margin: 0;
@@ -633,8 +638,8 @@ main h2 {
   font-size: 33px;
 }
 
-/* Navigation */
-.portfolio .slideshow nav span {
+/* Navigation (on the project slideshow)*/
+.slideshow-nav span {
   position: fixed;
   z-index: 1000;
   text-align: center;
@@ -642,28 +647,27 @@ main h2 {
   padding: 200px 30px;
   color: #fff;
 }
-
-.portfolio .slideshow nav span.nav-prev,
-.portfolio .slideshow nav span.nav-next {
+.slideshow-nav span.nav-prev,
+.slideshow-nav span.nav-next {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: 41px;
   line-height: 58px;
 }
-
-.portfolio .slideshow nav span.nav-prev {
+.slideshow-nav span.nav-prev {
   left: 0;
 }
-
-.portfolio .slideshow nav span.nav-next {
+.slideshow-nav span.nav-next {
   right: 0;
 }
-
-.portfolio .slideshow nav span.nav-close {
-  top: 30px;
+.slideshow-nav span.nav-close {
+  top: 20px;
   right: 30px;
   padding: 0;
+}
+.slideshow-nav i {
+  font-size: 4rem;
 }
 
 /* Info on arrow key navigation */
