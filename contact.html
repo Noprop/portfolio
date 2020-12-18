@@ -38,6 +38,28 @@
         </a>
       </li>
     </ul>
+    <nav role="navigation" class="mobile-nav">
+      <div class="menu-toggle">
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul class="mobile-menu">
+          <li>
+            <a href="index.html"><i class="fa fa-home"></i><span>Home</span></a>
+          </li>
+          <li>
+            <a href="about.html"><i class="fa fa-user"></i><span>About</span></a>
+          </li>
+          <li class="active">
+            <a href="projects.html"><i class="fa fa-briefcase"></i><span>Projects</span></a>
+          </li>
+          <li>
+            <a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contacts</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
   <section class="title-section">
     <h1>Get in <span>Touch</span></h1>
@@ -88,10 +110,10 @@
         <!-- </div> -->
       </section>
       <form action="submit" class="contact-form">
-        <label for="name" class="sr-only"></label>
+        <label for="name" class="sr-only">What is your name?</label>
         <input type="text" placeholder="Your name" name="name" id="name">
         <input type="email" placeholder="Your email" name="email">
-        <label for="subject" class="sr-only"></label>
+        <label for="subject" class="sr-only">Subject?</label>
         <input type="text" placeholder="Your subject" name="subject" id="subject">
         <textarea name="message" id="message" placeholder="Your message"></textarea>
         <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
