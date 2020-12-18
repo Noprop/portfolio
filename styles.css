@@ -120,10 +120,13 @@ header {
   text-align: center;
   left: 0;
   right: 0;
+  /* whoaaa this was genius. the nav links to other pages was only working as long as you weren't clicking on the font awesome icon. with the line below this it now works even if you click on the icons */
+  pointer-events: none;
 }
 .nav-item a {
   height: 50px;
   width: 50px;
+  display: block;
 }
 .nav-item h2 {
   font-size: 1.6rem;
@@ -333,7 +336,7 @@ main h2 {
 }
 .my-skills ul {
   display: grid; 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
 }
 .my-skills li {
