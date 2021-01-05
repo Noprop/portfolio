@@ -268,6 +268,7 @@ main {
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.05rem;
   position: relative;
+  z-index: 1;
   transition: all 0.2s;
 }
 .btn i {
@@ -348,7 +349,7 @@ header {
 .nav-item h2 {
   font-size: 1.6rem;
   font-weight: 500;
-  z-index: -1;
+  /* z-index: -1; */
   position: absolute;
   top: 0;
   right: 0;
@@ -445,7 +446,7 @@ h1 {
   right: 0;
   left: 0;
   top: 0;
-  z-index: -5;
+  /* z-index: -5; */
   letter-spacing: 1rem;
   color: rgba(255, 255, 255, 0.07);
 }
@@ -677,6 +678,7 @@ main h2 {
   font-size: 1.8rem;
   border: 1px solid #252525;
   transition: all 0.3s;
+  outline: none;
 }
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
@@ -740,7 +742,9 @@ main h2 {
 }
 .projects .grid figure img {
   display: block;
-  position: relative;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
 }
 .projects .grid li a {
   overflow: hidden;
@@ -917,7 +921,7 @@ p {
   text-align: center;
   cursor: pointer;
   padding: 200px 30px;
-  color: #fff;
+  color: #ddd;
 }
 .slideshow-nav span.nav-prev,
 .slideshow-nav span.nav-next {
@@ -1000,15 +1004,12 @@ footer {
     width: 90%;
     margin: 0 auto 40px auto;
   }
-
   .my-skills {
     width: 90%;
   }
-
   .projects .grid-wrap {
     width: 80%;
   }
-
   .contact .wrapper {
     flex-wrap: wrap;
   }
@@ -1039,6 +1040,8 @@ footer {
   /* everything below is for the navs */
   .mobile-nav {
     display: block;
+    /* position: fixed;
+    z-index: 2000; */
   }
   .desktop-menu {
     display: none;
@@ -1187,6 +1190,86 @@ footer {
     width: 100%;
     margin-right: 0;
   }
+
+  .projects .slideshow a {
+    top: 100px;
+  }
+  .projects .info-keys {
+    display: none;
+  }
+  .projects .grid li {
+    width: 50%;
+  }
+  .projects .grid li figure div {
+    display: none !important;
+  }
+  .projects .slideshow {
+    background: #252525;
+  }
+  .projects .slideshow nav span {
+    padding: 0;
+  }
+  .projects .slideshow ul > li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+  }
+  .projects .slideshow ul > li:after {
+    display: none;
+  }
+  .projects .slideshow figure {
+    padding: 150px 30px 30px;
+    border-radius: 0;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .projects .slideshow nav span.nav-prev,
+  .projects .slideshow nav span.nav-next {
+    top: 35px;
+    width: 32px;
+    height: 32px;
+  }
+  .projects .slideshow nav span.nav-next {
+    right: 30px;
+  }
+  .projects .slideshow nav span.nav-prev {
+    left: 30px;
+  }
+  .projects .slideshow nav span.nav-prev img,
+  .projects .slideshow nav span.nav-next img {
+    width: 32px;
+    height: 32px;
+  }
+  .projects .slideshow nav span:before {
+    display: none;
+  }
+  .projects .slideshow nav span.nav-close {
+    top: 29px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    display: block;
+    line-height: 0;
+  }
+  .projects .slideshow nav span.nav-close img {
+    width: 32px;
+    height: 32px;
+  }
+  .projects .slideshow nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 92px;
+    background: #252525;
+    z-index: 1;
+    border-bottom: 1px solid #333;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1198,5 +1281,9 @@ footer {
   }
   .projects .grid li {
     width: 100%;
+  }
+  .projects .slideshow img {
+    height: 350px;
+    width: 350px;
   }
 }
